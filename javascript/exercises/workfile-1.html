@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script-1.js"></script>
+</head>
+
+<body>
+    <h1>Heading here</h1>    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis unde, quam ipsum laudantium eaque dolores eos, tempora est maiores sapiente quidem vero nobis fugit. Sit cupiditate quae exercitationem esse.</p>
+
+
+    <script>
+        console.log("Hello from web page.");
+
+        // Declaring (creating and naming) variables in JavaScript
+        let userFirstName; // Declares a variable named userFirstName
+        let taxRate;       // Declares a variable named taxRate
+
+        // Declaring variables and then assigning values to them
+        let userName; // Declare a variable
+        userName = "Sheila Murphy"; // Assign value to the variable
+        console.log(userName); // Outputs: Sheila Murphy
+
+        let userCountry = "Ireland"; // declare AND initialise variable
+        console.log(userCountry); // Outputs: Ireland
+
+        const userID = 1234; // declare AND initialise variable
+        console.log(userID); // Outputs: 1234
+
+        // Working with string variables
+        const firstName = "Peter";
+        let lastName = 'Smith';
+        let streetAddress = `42 Green Avenue`;
+        console.log(firstName); // Outputs: Peter
+        console.log(lastName); // Outputs: Smith
+        console.log(streetAddress); // Outputs: 42 Green Avenue
+
+        // Display on one line. Use , character to separate variables
+        console.log(firstName, lastName, streetAddress);
+        // Outputs: Peter Smith 42 Green Avenue
+
+        // Working with numeric variables	
+        let orderQty = 42;
+        let productPrice = 9.99;
+
+        // Setting a null value
+        let testScore = null; // Assign null without quotes. Not "null" (a string).
+
+        // About variable assignment
+        let salePrice = 100;
+        // Update variable value
+        salePrice = salePrice + 25;
+        console.log(salePrice); // Outputs: 125
+
+        // Mixing literals and variables
+        const customerFirstName = "Marie";
+        const accBalance = 10;
+                
+        // Using template literals
+        console.log(`Hi ${customerFirstName}. Your balance is €${accBalance}.`); 
+        // Outputs: Hi Marie. Your balance is €10.
+
+        // Checking the data type of a variable
+        let someVar = ""; // declare empty variable 
+
+        someVar = "12"; // assign string to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: string 
+
+        someVar = 12;  // assign number to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: number 
+
+        someVar = "12"; // assign string to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: string - again!
+
+        someVar = true; // assign boolean to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: boolean
+
+        someVar = null; // assign null to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: object (an error in JavaScript)
+
+        someVar = 24; // assign number to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: number - again!
+
+
+    </script>		
+
+</body>
+</html>

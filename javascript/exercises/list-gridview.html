@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Gridview (Tailwind)</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: set a default font + a slightly nicer rendering -->
+  <style>
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  </style>
+
+  <!-- External JS (non-blocking) -->
+  <script defer src="list-gridview.js"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <header class="border-b border-slate-800">
+    <div class="mx-auto w-full max-w-6xl px-4 py-6">
+      <h1 class="text-xl sm:text-2xl font-semibold tracking-tight">Products</h1>
+      <p class="mt-1 text-sm text-slate-400">
+        Responsive gridview using Tailwind CSS (dark UI).
+      </p>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl px-4 py-8">
+    <!-- Grid container -->
+    <section
+      id="productGrid"
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      aria-label="Product grid"
+    >
+      <!-- JS will inject product cards here -->
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800">
+    <div class="mx-auto w-full max-w-6xl px-4 py-6 text-sm text-slate-500">
+      Demo gridview • Tailwind CDN + vanilla JS
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggles and sliders</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1 { text-align: center; color: #333; }
+        h2 { color: #333; }
+
+        section {
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 32px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+
+        /* Toggle row layout */
+            .toggle-row {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-weight: bold;
+            }
+
+            /* Hide the real checkbox */
+            .toggle-switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            /* The visible track */
+            .toggle-switch {
+                position: relative;
+                display: inline-block;
+                width: 52px;
+                height: 28px;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-color: #ccc;
+                border-radius: 28px;
+                transition: background-color 0.3s ease;
+            }
+
+            /* The moving circle */
+            .slider::before {
+                content: "";
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                border-radius: 50%;
+                transition: transform 0.3s ease;
+            }
+
+            /* When the checkbox is checked, slide the circle right and change colour */
+            .toggle-switch input:checked + .slider {
+                background-color: #007BFF;
+            }
+
+            .toggle-switch input:checked + .slider::before {
+                transform: translateX(24px);
+            }
+
+            /* Dark theme styles applied to the whole page */
+            body.dark-mode {
+                background-color: #1a1a2e;
+                color: #e0e0e0;
+            }
+
+            body.dark-mode section {
+                background-color: #16213e;
+                border-color: #0f3460;
+            }
+
+            body.dark-mode h1,
+            body.dark-mode h2 {
+                color: #e0e0e0;
+            }
+
+            body.dark-mode .form-group label {
+                color: #e0e0e0;
+            }
+
+            body.dark-mode .card {
+                background-color: #0f3460;
+                border-color: #1a1a2e;
+                color: #e0e0e0;
+            }
+
+            /* Range slider */
+            input[type="range"] {
+                width: 100%;
+                max-width: 320px;
+                accent-color: #007BFF;
+                cursor: pointer;
+            }
+
+            /* Sample text preview */
+            #sampleText {
+                margin-top: 20px;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 16px;
+                line-height: 1.6;
+                transition: font-size 0.1s ease;
+            }
+    </style>
+
+    <script src="forms-toggle-range.js" defer></script>
+
+</head>
+
+<body>
+    
+    <section id="section-toggle">
+    <h2>Light / Dark mode</h2>
+    <div class="toggle-row">
+        <span>Light</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+        <span>Dark</span>
+    </div>
+</section>
+
+<section id="section-range">
+    <h2>Text size</h2>
+
+    <div class="form-group">
+        <label for="fontSizeRange">
+            Font size: <span id="fontSizeValue">16</span>px
+        </label>
+        <input type="range" id="fontSizeRange" 
+               min="10" max="48" step="1" value="16">
+    </div>
+
+    <p id="sampleText">
+        The quick brown fox jumps over the lazy dog. 
+        Adjust the slider above to change my font size.
+    </p>
+</section>
+
+
+
+</body>
+</html>

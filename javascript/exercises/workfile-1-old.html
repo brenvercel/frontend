@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <h1>Heading here</h1>    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis unde, quam ipsum laudantium eaque dolores eos, tempora est maiores sapiente quidem vero nobis fugit. Sit cupiditate quae exercitationem esse.</p>
+
+
+    <script>
+
+        // Declaring and populating an object
+        const objUser = {
+            firstName: "Luis", // string
+            lastName: "Martinez", // string
+            age: 32, // number
+            isActive: true // boolean
+        };
+
+        console.log(objUser);
+
+        // === Displaying a property inside an object by its key ===
+        console.log(`User's first name: ${objUser.firstName}`);
+        console.log(`User's last name:  ${objUser.lastName}`);
+        console.log(`User's age: ${objUser.age}`);
+        console.log(`User active?: ${objUser.isActive}`);
+
+        // === Accessing an object property by its key ===
+        console.log(`User's first name: ${objUser.firstName}`);
+
+        // === Accessing an object value to a variable ===
+        const varFirstName = objUser.firstName;
+        console.log(`The first name of the user is: ${varFirstName}`);
+
+        // === Destructuring by reusing property keys ===
+        const { firstName, lastName, age, isActive } = objUser;
+
+        // Object's properties are now inside variables
+        console.log(`User's first name: ${firstName}`);
+        console.log(`User's last name:  ${lastName}`);
+        console.log(`User's age: ${age}`);
+        console.log(`User active?: ${isActive}`);
+
+// Destructuring with different variable names
+const { firstName: customerFirstName, lastName: customerLastName } = objUser;
+console.log(`New variable names: ${customerFirstName} ${customerLastName}`);
+
+        const objTest = [];
+        console.log(`objTest: ${objTest}`);
+
+    </script>
+</body>
+</html>
